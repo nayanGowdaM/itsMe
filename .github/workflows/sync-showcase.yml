@@ -2,12 +2,19 @@ name: Sync with nayan-codes-showcase
 
 on:
   push:
-    branches: [ main, master, info ]  # Including your current branch
+    branches: [ main ]  # Only trigger on pushes to main (merges)
+  pull_request:
+    types: [ closed ]  # Trigger when PR is closed
+    branches: [ main ]
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    # Only run if:
+    # 1. Direct push to main/master, OR
+    # 2. PR was merged (not just closed)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     
     steps:
     - name: Checkout source repository
@@ -38,7 +45,12 @@ jobs:
 
     - name: Create success summary
       run: |
-        echo "✅ Successfully synced ${{ github.ref_name }} branch to nayan-codes-showcase/main"
+        if [ "${{ github.event_name }}" == "pull_request" ]; then
+          echo "✅ Successfully synced merged PR #${{ github.event.number }} to nayan-codes-showcase/main"
+          echo "🔀 PR: ${{ github.event.pull_request.title }}"
+        else
+          echo "✅ Successfully synced direct push to main to nayan-codes-showcase/main"
+        fi
         echo "📊 Commit: ${{ github.sha }}"
         echo "👤 Author: ${{ github.actor }}"
 
