@@ -71,7 +71,7 @@ const ProjectsSection = () => {
                   asChild
                 >
                   <a 
-                    href="https://github.com/nayanGowdaM" 
+                    href="https://github.com/nayanGowdaM/itsMe" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
