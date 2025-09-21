@@ -30,7 +30,7 @@ jobs:
 
     - name: Add target repository as remote
       run: |
-        git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/nayanGowdaM/nayan-codes-showcase.git
+        git remote add target https://${{ secrets.SYNC_TOKEN }}@github.com/nayanGowdaM/nayan-codes-showcase.git
 
     - name: Fetch target repository
       run: git fetch target
