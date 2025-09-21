@@ -16,7 +16,7 @@ const HeroSection = () => {
     "aTech Enthusiast"
   ];
   
-  const staticDescription = "Software Developer Intern @Greenlight | Java, Spring Boot, AWS, Kotlin, Node.js, Yocto Project Build | Building Scalable, Real-Time & Data-Driven Systems";
+  const staticDescription = "Software Developer Intern @Greenlight | Java, Spring Boot, AWS, Kotlin, Node.js, Yocto Project Build | Building Scalable, Real-Time & Event-Driven Systems";
 
   // Typewriter effect for animated text
   useEffect(() => {

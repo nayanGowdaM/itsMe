@@ -33,8 +33,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-right">
             <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-              Enthusiastic Software Developer with experience in <span className="text-primary font-semibold">Backend Development</span> and 
-              <span className="text-primary font-semibold"> Full Stack Applications</span>. 
+              Enthusiastic Software Developer with experience in <span className="text-primary font-semibold">Backend Development</span>. 
               I enjoy building scalable, real-time systems and applying new technologies to solve real-world problems.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mb-8">
@@ -44,7 +43,7 @@ const AboutSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-3">
-              {['Backend Development', 'Full Stack Apps', 'Real-time Systems', 'Cloud Technologies'].map((skill) => (
+              {['Backend Development', 'API Development', 'Real-time Systems', 'Cloud Technologies'].map((skill) => (
                 <span 
                   key={skill}
                   className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20"

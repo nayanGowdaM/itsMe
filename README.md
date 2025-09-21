@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 
 ## About
 
-This is a personal portfolio website showcasing my skills, experience, and projects as a Software Developer specializing in Backend Development, Full Stack Applications, and IoT/ML solutions.
+This is a personal portfolio website showcasing my skills, experience, and projects as a Software Developer specializing in Backend Development, Real-time Systems, and IoT/ML solutions.
 
 ## Technologies Used
 

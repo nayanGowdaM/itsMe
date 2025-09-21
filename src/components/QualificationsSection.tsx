@@ -33,25 +33,25 @@ const QualificationsSection = () => {
       issuer: "NPTEL",
       badge: "Gold Medal",
       achievement: "Top 5%",
-      link: "https://nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS07S1450011003107749"
+      link: "https://archive.nptel.ac.in/content/noc/NOC23/SEM2/Ecertificates/106/noc23-cs97/Course/NPTEL23CS97S1464165210083483.pdf"
     },
     {
       title: "Python for Everybody",
       issuer: "Coursera",
       badge: "Certified",
-      link: "https://coursera.org/share/python-certificate"
+      link: "https://www.coursera.org/account/accomplishments/specialization/YRJ2MVG5SYPF"
     },
     {
       title: "Version Control with Git",
       issuer: "Coursera", 
       badge: "Certified",
-      link: "https://coursera.org/share/git-certificate"
+      link: "https://coursera.org/share/46de8fd8dc4e5c1e2cda4b67a58a8546"
     },
     {
       title: "Introduction to Soft Computing",
       issuer: "NPTEL",
       badge: "Certified",
-      link: "https://nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS07S1450011003107750"
+      link: "https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs37/Course/NPTEL24CS37S34660188130120361.pdf"
     }
   ];
 
