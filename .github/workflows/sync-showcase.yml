@@ -12,9 +12,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     # Only run if:
-    # 1. Direct push to main/master, OR
-    # 2. PR was merged (not just closed)
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    # 1. We're in the itsMe repository (not nayan-codes-showcase)
+    # 2. Direct push to main/master, OR
+    # 3. PR was merged (not just closed)
+    if: |
+      github.repository == 'nayanGowdaM/itsMe' && 
+      (github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true))
     
     steps:
     - name: Checkout source repository
@@ -39,7 +42,7 @@ jobs:
 
     - name: Push to target repository
       run: |
-        # Push the current branch to the main branch of target repository
+        # Push everything to target repository (including workflows)
         git push target HEAD:main --force-with-lease
         
         # Also push tags if any
