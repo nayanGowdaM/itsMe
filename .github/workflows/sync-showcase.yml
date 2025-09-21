@@ -1,0 +1,46 @@
+name: Sync with nayan-codes-showcase
+
+on:
+  push:
+    branches: [ main, master, info ]  # Including your current branch
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout source repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history for proper sync
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Add target repository as remote
+      run: |
+        git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/nayanGowdaM/nayan-codes-showcase.git
+
+    - name: Fetch target repository
+      run: git fetch target
+
+    - name: Push to target repository
+      run: |
+        # Push the current branch to the main branch of target repository
+        git push target HEAD:main --force-with-lease
+        
+        # Also push tags if any
+        git push target --tags || true
+
+    - name: Create success summary
+      run: |
+        echo "✅ Successfully synced ${{ github.ref_name }} branch to nayan-codes-showcase/main"
+        echo "📊 Commit: ${{ github.sha }}"
+        echo "👤 Author: ${{ github.actor }}"
+
+    - name: Cleanup
+      run: git remote remove target

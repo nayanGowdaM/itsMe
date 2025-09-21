@@ -39,7 +39,7 @@ const AboutSection = () => {
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mb-8">
               My work spans application development and storage systems, giving me a solid foundation to grow as a developer. 
-              Currently working as a Software Engineer Intern at <span className="text-accent font-semibold">Greenlight</span>, 
+              Currently working as a Software Engineer Intern at <a href="https://greenlight.com/" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline transition-all duration-200">Greenlight</a>, 
               where I focus on building robust financial technology solutions.
             </p>
             

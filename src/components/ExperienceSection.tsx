@@ -5,6 +5,7 @@ const ExperienceSection = () => {
   const experiences = [
     {
       company: "Greenlight",
+      website: "https://greenlight.com/",
       position: "Software Engineer Intern",
       duration: "Jul 2025 – Present",
       location: "Hybrid",
@@ -18,6 +19,7 @@ const ExperienceSection = () => {
     },
     {
       company: "Pure Storage",
+      website: "https://www.purestorage.com/",
       position: "MTS Intern",
       duration: "Jan 2025 – Jun 2025",
       location: "Bangalore, India",
@@ -31,6 +33,7 @@ const ExperienceSection = () => {
     },
     {
       company: "ATDXT",
+      website: "https://www.atdxt.com/",
       position: "Project Intern",
       duration: "Nov 2023 – May 2024",
       location: "Bangalore, India",
@@ -93,7 +96,15 @@ const ExperienceSection = () => {
                     </div>
 
                     <h3 className="text-2xl font-bold mb-2">{exp.position}</h3>
-                    <h4 className="text-xl text-primary font-semibold mb-6">{exp.company}</h4>
+                    <h4 className="text-xl text-primary font-semibold mb-6">
+                      {exp.website ? (
+                        <a href={exp.website} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all duration-200">
+                          {exp.company}
+                        </a>
+                      ) : (
+                        exp.company
+                      )}
+                    </h4>
 
                     <ul className="space-y-3">
                       {exp.responsibilities.map((responsibility, idx) => (

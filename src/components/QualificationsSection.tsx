@@ -96,7 +96,7 @@ const QualificationsSection = () => {
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent p-1">
                     <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-lg font-bold hero-text">9.28</div>
+                        <div className="text-lg font-bold hero-text">9.33</div>
                         <div className="text-xs text-muted-foreground">CGPA</div>
                       </div>
                     </div>
