@@ -9,7 +9,7 @@ export default defineConfig({
     port: 8080,
   },
   plugins: [react()],
-  base: process.env.VITE_BASE_URL || "/itsMe",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
