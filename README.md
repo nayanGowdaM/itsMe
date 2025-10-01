@@ -14,6 +14,7 @@ This is a personal portfolio website showcasing my skills, experience, and proje
 - **Styling**: Tailwind CSS
 - **Routing**: React Router DOM
 - **Icons**: Lucide React
+- **Email Service**: EmailJS (for contact form)
 
 ## Getting Started
 
@@ -34,12 +35,17 @@ Make sure you have Node.js installed on your system. If you don't have it, you c
    npm install
    ```
 
-3. **Start the development server**:
+3. **Configure EmailJS for the contact form** (optional but recommended):
+   - Follow the detailed setup guide in [EMAILJS_SETUP.md](./EMAILJS_SETUP.md)
+   - Copy `.env.example` to `.env.local` and add your EmailJS credentials
+   - Without this setup, the contact form will show a configuration error
+
+4. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-4. **Open your browser** and navigate to:
+5. **Open your browser** and navigate to:
    ```
    http://localhost:8080
    ```
@@ -77,6 +83,11 @@ src/
 - **TypeScript**: Full type safety throughout the application
 - **Component Library**: Built with shadcn/ui components
 - **SEO Optimized**: Proper meta tags and structured data
+- **Functional Contact Form**: 
+  - Real-time form validation
+  - Email integration via EmailJS
+  - Success/error notifications
+  - Mobile-friendly design
 
 ## Contact
 
