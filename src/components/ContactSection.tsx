@@ -96,9 +96,23 @@ const ContactSection = () => {
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+      // Debug logging (remove in production)
+      console.log('Environment check:', {
+        hasServiceId: !!serviceId,
+        hasTemplateId: !!templateId,
+        hasPublicKey: !!publicKey,
+        serviceIdPrefix: serviceId?.substring(0, 8),
+        mode: import.meta.env.MODE
+      });
+
       // Check if EmailJS is configured
       if (!serviceId || !templateId || !publicKey) {
         console.error('EmailJS is not configured. Please set up environment variables.');
+        console.error('Missing variables:', {
+          serviceId: !serviceId,
+          templateId: !templateId,
+          publicKey: !publicKey
+        });
         toast({
           title: "Configuration Error",
           description: "Email service is not configured. Please contact the administrator.",
